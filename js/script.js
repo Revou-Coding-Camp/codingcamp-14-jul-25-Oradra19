@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Show current time
   function updateTime() {
     const now = new Date();
     document.getElementById("currentTime").textContent = now.toLocaleString();
@@ -7,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
   updateTime();
   setInterval(updateTime, 1000);
 
-  // Form handler
   const form = document.getElementById("messageForm");
   form.addEventListener("submit", function (e) {
     e.preventDefault();
@@ -17,7 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("outputMessage").textContent = document.getElementById("messageText").value;
   });
 
-  // Hamburger menu toggle
   const hamburger = document.getElementById("hamburger");
   const mobileMenu = document.getElementById("mobileMenu");
   hamburger.addEventListener("click", () => {
@@ -25,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Modal name input
 function submitName() {
   const name = document.getElementById("nameInput").value.trim();
   if (!name) {
